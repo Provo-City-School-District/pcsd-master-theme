@@ -1,0 +1,65 @@
+:root {
+  --main-background: #000;
+  --theme-white: #fff;
+  --border-color: #ccc;
+}
+main,header,nav {
+  background-color: var(--theme-white);
+  max-width: 2000px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: var(--main-background);
+  font-size: 100%;
+}
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+article {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0 1em;
+}
+p {
+  margin: 1em 0;
+}
+strong {
+  font-weight: bold;
+  font-size: 110%
+}
+/*================================================
+header
+=================================================*/
+#mainHeader img {
+  max-width: 300px;
+  grid-area: logo;
+}
+#mainHeader nav {
+  grid-area: nav;
+}
+#mainHeader form {
+  grid-area: form;
+}
+#mainHeader .address {
+  grid-area: address;
+}
+#mainHeader {
+  display: grid;
+  grid-template-areas:
+    "logo nav form"
+    "logo address form";
+}
+
+
+/*================================================
+headings
+=================================================*/
+h1 {font-size: 2em;}
+h2 {font-size:1.75em;}
+h3 {font-size:1.5em;}
