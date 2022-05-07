@@ -4,7 +4,7 @@ Theme URI: https://tech.provo.edu
 Author: Josh Espinoza, Rob Francom, Shauna Sprunger
 Author URI: https://tech.provo.edu
 Description: For Provo City School District Websites
-Version: 0.0.1
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: <https://www.gnu.org/licenses/gpl-2.0.html>
 */
@@ -17,6 +17,12 @@ License URI: <https://www.gnu.org/licenses/gpl-2.0.html>
 For Provo City School District Websites
 
 == Changelog ==
+= 0.0.02 =
+* Worked on header styling/layout
+* worked on menu including responsive switch
+* added provo school district header items, including logo, menu, search form, address
+* added search icon
+
 = 0.0.01 =
 initial structure build with very basic wordpress things
 

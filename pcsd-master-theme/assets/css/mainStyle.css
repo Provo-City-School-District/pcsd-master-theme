@@ -1,13 +1,14 @@
 :root {
   --main-background: #000;
   --theme-white: #fff;
+  --theme-gray: #777;
   --border-color: #ccc;
+  --header-grad: linear-gradient(to bottom,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
 }
-main,header,nav {
+main,header {
   background-color: var(--theme-white);
   max-width: 2000px;
   margin: 0 auto;
-  border-radius: 3px;
 }
 img {
   max-width: 100%;
@@ -23,7 +24,6 @@ section {
 }
 article {
   border: 1px solid var(--border-color);
-  border-radius: 5px;
   padding: 0 1em;
 }
 p {
@@ -37,25 +37,72 @@ strong {
 header
 =================================================*/
 #mainHeader img {
-  max-width: 300px;
   grid-area: logo;
+  max-width: 100px;
 }
 #mainHeader nav {
   grid-area: nav;
 }
+#mainHeader nav ul {
+  position: absolute;
+  left: -9000px;
+}
 #mainHeader form {
   grid-area: form;
 }
+#mainHeader form label, #mainHeader form input:not(.submit) {
+  position: absolute;
+  left: -9999px;
+}
+#mainHeader form .submit {
+  background-image: url(../img/icon/dk/search-loupe.svg);
+  width: 25px;
+  height: 25px;
+  background-position: 0 0;
+  background-size: contain;
+  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
 #mainHeader .address {
   grid-area: address;
+  max-width: 100%;
+  color: var(--theme-gray);
+  list-style: none;
+  margin: 0;
+  padding:0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr minmax(50px, auto);
+  gap: 25px;
 }
 #mainHeader {
+  padding-top: 5px;
   display: grid;
+  grid-template-columns: max(130px) 1fr max(100px);
+  justify-items: center;
+  align-items: center;
+  background: var(--header-grad);
   grid-template-areas:
     "logo nav form"
-    "logo address form";
+    "address address address";
 }
-
+@media screen and (min-width: 600px) {
+  #mainHeader {
+    display: grid;
+    grid-template-areas:
+      "logo nav form"
+      "logo address address";
+  }
+  #mainHeader nav > a {
+    display: none;
+  }
+  #mainHeader nav ul {
+    position: unset;
+    
+  }
+}
 
 /*================================================
 headings
