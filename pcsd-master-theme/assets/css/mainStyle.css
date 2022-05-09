@@ -5,6 +5,15 @@
   --border-color: #ccc;
   --header-grad: linear-gradient(to bottom,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
 }
+/*================================================
+headings
+=================================================*/
+h1 {font-size: 2em;}
+h2 {font-size:1.75em;}
+h3 {font-size:1.5em;}
+/*================================================
+main structural Elements
+=================================================*/
 main,header {
   background-color: var(--theme-white);
   max-width: 2000px;
@@ -19,7 +28,7 @@ body {
   font-size: 100%;
 }
 section {
-  max-width: 1000px;
+  max-width: 1034px;
   margin: 0 auto;
 }
 article {
@@ -34,7 +43,7 @@ strong {
   font-size: 110%
 }
 /*================================================
-header
+Site Header
 =================================================*/
 #mainHeader img {
   grid-area: logo;
@@ -104,9 +113,54 @@ header
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+.featured-image {
+  background-repeat: no-repeat;
+  order: -1;
+}
+main section .post {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;  
+
+}
+
+
+
+
 /*================================================
-headings
+main blog index
 =================================================*/
-h1 {font-size: 2em;}
-h2 {font-size:1.75em;}
-h3 {font-size:1.5em;}
+.blog main section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/*================================================
+main blog featured image
+=================================================*/
+.blog main section article .featured-image {
+  min-height: 150px;
+  background-position: 50%;
+}
+/*
+================================================================================================
+Singular
+==================================================================================================
+*/
+/*================================================
+Singular featured image
+=================================================*/
+.single main section article .featured-image {
+  min-height: 500px;
+  background-position: 50%;
+ 
+}

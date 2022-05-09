@@ -10,3 +10,22 @@ add_action( 'wp_enqueue_scripts', 'espi_theme_assets' );
 
 // lets wordpress build our <title> tags
 add_theme_support( 'title-tag' );
+
+
+
+//register in ACF
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page( [
+		'page_title' => 'Theme Options',
+		'menu_title' => 'Theme Options',
+		'menu_slug' => 'theme_options',
+		'capability' => 'edit_theme_options',
+		'parent_slug' => '',
+		'position' => 3,
+		'icon_url' => false,
+		'redirect' => false,
+		'post_id' => 'options',
+		'autoload' => false,
+		'update_button' => 'Update',
+	] );
+}

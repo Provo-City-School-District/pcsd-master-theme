@@ -7,7 +7,8 @@
   </head>
   <body <?php body_class(); ?>>
     <header id="mainHeader">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pcsd-logo-website-header-x2.png" alt="District Logo" />
+      
+      <img src="<?php echo get_field('site_logo','option'); ?>" alt="Website Logo" />
       <nav>
         <a><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
         <ul>
@@ -17,7 +18,6 @@
           <li><a href="https://github.com/joshespi/espi-theme">Theme</a></li>
         </ul>
       </nav>
-
       <form>
         <label for="search">Search: </label>
         <input type="text" placeholder="Search.." name="search">
